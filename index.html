@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Los Sures</title>
+
+  <!-- Application styles -->
+  <link rel="stylesheet" href="css/lossures.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/zeega.css">
+    <link rel="stylesheet" href="js/lib/leaflet/leaflet.css">
+    
+    		
+			<script> 
+			sessionStorage.setItem('directory', '');
+			sessionStorage.setItem('hostname','http://alpha.zeega.org/');
+			</script>
+			
+			
+			<script data-main="js/loaders/lossures.js" src="js/lib/require.js"></script>
+</head>
+
+
+<body style="cursor: auto; ">
+  <!-- Main container -->
+ 
+ <div class='cover-overlay' >Click to play</div>
+ 
+ <div id='zeega-container' ></div>
+ 
+ <div id="background"><div class="video-background"><video id="background-video" class="large-video" src="media/intro.mp4"></video></div></div>
+ <div id="main"><div class="handle"></div><div class="video-draggable"><div class="text-overlay">This is the title of the film!</div><video id="draggable-video" class="large-video" src="media/stairs.mp4"></video></div></div>
+ <div id="act-two" ><div class="video-draggable"><video id="act-two-video" class="large-video" src="media/marta_main.mp4"></video></div></div>
+
+ <div id='top-right-overlay'><video class='small-video' id ='top-right-overlay-video' controls="true" src='media/marta_sub.mp4'></video></div>
+ 
+
+  <!-- Application source -->
+  
+
+</body>
+</html>

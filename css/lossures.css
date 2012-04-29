@@ -1,0 +1,172 @@
+
+
+body{
+
+background-color:black;
+overflow:hidden;
+}
+
+
+.cover-overlay{
+
+position: absolute;
+width:100%;
+height:100%;
+color:white;
+background:black;
+text-align:center;
+font-size:100px;
+z-index:1001;
+padding-top:200px;
+
+
+}
+
+
+
+
+#top-right-overlay {
+
+	position:absolute;
+	top:50px;
+	right:50px;
+	width:30%;
+	min-height:500px;
+	z-index:10000;
+	display:none;
+
+
+
+}
+
+#zeega-container{
+
+
+	position:absolute;
+	top:-1000%;
+	right:-1000%;
+	width:500px;
+	height:250px;
+	z-index:10000;
+
+
+}
+
+
+#act-two {
+
+	position:absolute;
+
+	width:100%;
+	min-height:100px;
+	z-index:1001;
+	display:none;
+
+
+
+}
+
+
+
+
+.small-video {
+	position:absolute;
+
+	width:100%;
+	
+
+}
+
+.large-video {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	
+	min-height:500px;
+	height:100%;
+	
+
+}
+
+.background-video {
+
+position:fixed;
+top:0px;
+left:0px;
+width:100%;
+min-height:500px;
+height:100%;
+background-color:black;
+}
+
+
+
+.video-draggable {
+
+position:fixed;
+top:0px;
+left:0px;
+width:100%;
+min-height:500px;
+height:100%;
+background: black;
+
+	
+
+			
+}
+
+
+#background{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:0;
+	background-color:black;
+
+}
+
+#main{
+	position:absolute;
+	overflow:hidden;
+	top:0px;
+	left:70%;
+	width:100%;
+	height:100%;
+	z-index:1000;
+	opacity: 1;
+
+
+
+}
+
+
+.text-overlay{
+
+position: absolute;
+width: 100%;
+text-align:center;
+color:white;
+font-size:130px;
+line-height: 120px;
+top:200px;
+z-index: 10;
+
+}
+
+.handle{
+
+	position:relative;
+	left: -8px;
+	z-index:100;
+	height:100%;
+	width:15px;
+
+	opacity:.5;
+	background:yellow;
+	cursor: ew-resize;
+}
+
