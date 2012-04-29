@@ -215,6 +215,27 @@ var ZeegaPlayer = Backbone.View.extend({
 		})
 	},
 	
+	beginPlayback:function(){
+		
+		id=this.initialFrame.id;
+		var _this = this;
+		var frame = this.currentSequence.frames.get(id);
+		frame.off('ready', this.renderFrame);
+		
+		_.each( frame.get('layers'), function(layerID,i){
+			_this.currentSequence.layers.get( layerID ).trigger('player_play',i+1);
+		})
+		
+		this.setAdvance( frame.get('attr').advance )
+		
+		this.currentFrame = frame;
+		
+		this.updateCitations();
+		
+		this.updateArrows();
+	
+	},
+	
 	renderFrame : function( id )
 	{
 	
@@ -222,6 +243,8 @@ var ZeegaPlayer = Backbone.View.extend({
 			this.onReady();
 			
 		}
+		else{
+		
 		
 		var _this = this;
 		var frame = this.currentSequence.frames.get(id);
@@ -238,6 +261,8 @@ var ZeegaPlayer = Backbone.View.extend({
 		this.updateCitations();
 		
 		this.updateArrows();
+		
+		}
 	},
 	
 	setAdvance : function( adv )

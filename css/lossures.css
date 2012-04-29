@@ -39,8 +39,20 @@ padding-top:200px;
 
 }
 
-#zeega-container{
+#los-sures-zeega-container{
 
+
+	position:absolute;
+	top:-1000%;
+	right:-1000%;
+	width:100%;
+	height:100%;
+	z-index:10000;
+
+
+}
+
+#los-sures-zeega-container-2 {
 
 	position:absolute;
 	top:-1000%;
@@ -49,11 +61,10 @@ padding-top:200px;
 	height:250px;
 	z-index:10000;
 
-
 }
 
 
-#act-two {
+#act-three {
 
 	position:absolute;
 
@@ -66,14 +77,33 @@ padding-top:200px;
 
 }
 
+#act-two {
 
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:1001;
+	display:none;
+  background: black;
+}
 
+#video-right {
+ position: absolute;
+ left: 61%;
+ width: 35%;
+}
+
+#video-left {
+ position: absolute;
+ left: 5%;
+ width: 47%;
+}
 
 .small-video {
 	position:absolute;
 
 	width:100%;
-	
+
 
 }
 
@@ -82,10 +112,10 @@ padding-top:200px;
 	top:0px;
 	left:0px;
 	width:100%;
-	
+
 	min-height:500px;
 	height:100%;
-	
+
 
 }
 
@@ -112,9 +142,9 @@ min-height:500px;
 height:100%;
 background: black;
 
-	
 
-			
+
+
 }
 
 

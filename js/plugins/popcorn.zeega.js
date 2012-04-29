@@ -1,26 +1,26 @@
 // pop.zeega( ..... [ 10, 10, 10,
 
 (function( Popcorn ) {
-  Popcorn.plugin( "zeega", function() 
+  Popcorn.plugin( "zeega", function()
   {
     // one time Setup
     var ZeegaScriptURL = "http://somewhere",
 
     // Ready called by Zeega player
     zeegaReady = function( options ) {
-    	
+
       var fto = options.frameTimeout || 10;
       for ( var i = 0, len = options._zeega.frameCount; i < len; i++ ) {
         createFrameAdvance( options, fto + ( i * fto ) );
       }
-      
+
     },
 
     // Call end manually
     zeegaEnded = function(options) {
       console.log('zeegaEnded has been called');
-      options._natives.end && options._natives.end();
-      
+      options._natives.end && options._natives.end({},options);
+
     },
 
     createZeega = function( options ) {
@@ -36,26 +36,28 @@
     createFrameAdvance = function( options, time ) {
       options._frameAdvanceIds.push(
         setTimeout( function() {
-          options._zeega && options._zeega.advanceFrame();
+          options._zeega && options._zeega.advanceFrame({},options);
         }, time )
       );
-    
-    
+
+
     };
-	
-	
+
+
     return {
       start: function( event, options ) {
-      
+
 		document.getElementById(options.target).style.top=options.css.top;
 		document.getElementById(options.target).style.left=options.css.left;
-
+		options._zeega.beginPlayback();
       },
       end: function( event, options ) {
-        
+        if ( options.noEnd ) {
+          return;
+        }
         document.getElementById(options.target).style.top="-1000%";
-		document.getElementById(options.target).style.left="-1000%";
-        
+		    document.getElementById(options.target).style.left="-1000%";
+
         /*
         Popcorn.forEach( options._frameAdvanceIds, function( id ) {
           clearTimeout( id );

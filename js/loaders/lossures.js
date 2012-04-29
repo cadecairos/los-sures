@@ -1,9 +1,9 @@
 /********************************************
 
 	MAIN.JS
-	
+
 	VERSION 0.1
-	
+
 	LOADS JS FILES
 
 
@@ -25,28 +25,29 @@ var loadFiles = [
 	//libraries
 	'order!lib/underscore',
 	'order!lib/backbone',
-	'order!lib/jquery/ui/js/jquery-ui.min',	
+	'order!lib/jquery/ui/js/jquery-ui.min',
 	'order!lib/leaflet/leaflet',
 	'order!lib/popcorn_flash',
+	'order!lib/ratiator',
 
 	//core
 	'order!app/lossures',
 	'order!lib/bootstrap',
 
 
-	
-	
+
+
 	//zeega
 	'order!app/zeega.project-viewer',
 	'order!app/zeega.player',
-	
+
 	'order!helpers/zeega.helpers',
 	'order!helpers/zeega.extends',
-	
+
 	'order!lib/spin',
 	'order!lib/jquery/plugins/spin',
-	
-	
+
+
 
 	'order!app/views/editor.layer/editor.view.layer.layer-list',
 	'order!app/views/editor.layer/editor.view.layer.visual-editor',
@@ -61,17 +62,17 @@ var loadFiles = [
 
 	'order!plugins/layers/rectangle/rectangle',
 
-	       
+
 	'order!plugins/players/plyr',
-		
-	
+
+
 	'order!plugins/popcorn.zeega',
-	
-	
+
+
 	//app
-		
+
 	'order!app/index',
-	
+
 
 	];
 
